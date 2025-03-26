@@ -1,3 +1,90 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fef6e4; /* Soft cream background */
+  color: #432818; /* Dark brown text color */
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: #5a2a27; /* Darker color for the header */
+}
+
+button {
+  background-color: #fcd5ce;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #432818;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bb9457;
+  color: white;
+}
+
+/* Card Styling */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5a2a27;
+}
+
+.card-location {
+  color: #bb9457;
+}
+
+.card-content {
+  font-size: 1rem;
+  color: #432818;
+  margin-top: 10px;
+}
+
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bb9457;
+  margin: 20px auto;
+  display: block;
+  font-size: 1rem;
+}
+
+/* Dropdown */
+select {
+  background-color: #fef6e4;
+  border: 1px solid #bb9457;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin
