@@ -81,17 +81,17 @@ export default function MnemonicPalace() {
         className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto"
       >
         {filtered.map((entry, index) => (
-          <div key={index} className="border border-[#bb9457] bg-[#fffaf0] shadow-md p-4 rounded">
-            <div className="p-4 space-y-2">
+          <div key={index} className="rounded-xl border border-[#e8cfc2] bg-white p-6 shadow-lg transition hover:shadow-xl">
+            <div className="space-y-2">
               <div className="flex items-center gap-2">
                 <Landmark className="h-5 w-5 text-[#bb9457]" />
-                <h2 className="text-xl font-semibold tracking-tight">{entry.term}</h2>
+                <h2 className="text-2xl font-semibold tracking-tight">{entry.term}</h2>
               </div>
               <div className="flex items-center gap-2 text-sm italic">
                 <MapPin className="h-4 w-4 text-[#bb9457]" />
                 <p>{entry.location}</p>
               </div>
-              <p className="text-base mt-2">{entry.mnemonic}</p>
+              <p className="text-base leading-relaxed">{entry.mnemonic}</p>
             </div>
           </div>
         ))}
@@ -112,17 +112,17 @@ export default function MnemonicPalace() {
             transition={{ duration: 0.4 }}
             className="max-w-xl mx-auto"
           >
-            <div className="border border-[#bb9457] bg-[#fffaf0] shadow-md p-4 rounded">
-              <div className="p-4 space-y-2">
+            <div className="rounded-xl border border-[#e8cfc2] bg-white p-6 shadow-lg">
+              <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <Landmark className="h-5 w-5 text-[#bb9457]" />
-                  <h2 className="text-xl font-semibold tracking-tight">{data[currentIndex].term}</h2>
+                  <h2 className="text-2xl font-semibold tracking-tight">{data[currentIndex].term}</h2>
                 </div>
                 <div className="flex items-center gap-2 text-sm italic">
                   <MapPin className="h-4 w-4 text-[#bb9457]" />
                   <p>{data[currentIndex].location}</p>
                 </div>
-                <p className="text-base mt-2">{data[currentIndex].mnemonic}</p>
+                <p className="text-base leading-relaxed">{data[currentIndex].mnemonic}</p>
               </div>
             </div>
           </motion.div>
