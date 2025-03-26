@@ -41,7 +41,7 @@ export default function MnemonicPalace() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#fef6e4] to-[#fcd5ce] p-6 text-[#432818] font-serif">
-      <h1 className="text-4xl font-bold text-center mb-6 tracking-wide">Classical Mnemonic Palace</h1>
+      <h1 className="text-4xl font-bold text-center mb-6 tracking-wide text-red-500">Classical Mnemonic Palace</h1>
       <div className="max-w-2xl mx-auto mb-8 flex flex-col sm:flex-row items-center gap-4">
         <div className="w-full flex flex-wrap justify-center gap-1 text-sm mb-2">
           {[...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'].map((letter) => (
