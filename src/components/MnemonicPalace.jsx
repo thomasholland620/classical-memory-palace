@@ -1,6 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { MapPin, Landmark } from "lucide-react";
 import { motion } from "framer-motion";
@@ -60,11 +57,11 @@ export default function MnemonicPalace() {
             </button>
           ))}
         </div>
-        <Input
+        <input
           placeholder="Search by term or location..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full border border-[#bb9457] bg-[#fffaf0]"
+          className="w-full border border-[#bb9457] bg-[#fffaf0] px-3 py-2 rounded"
         />
         <select
           value={selectedCategory}
@@ -84,8 +81,8 @@ export default function MnemonicPalace() {
         className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto"
       >
         {filtered.map((entry, index) => (
-          <Card key={index} className="border border-[#bb9457] bg-[#fffaf0] shadow-md">
-            <CardContent className="p-4 space-y-2">
+          <div key={index} className="border border-[#bb9457] bg-[#fffaf0] shadow-md p-4 rounded">
+            <div className="p-4 space-y-2">
               <div className="flex items-center gap-2">
                 <Landmark className="h-5 w-5 text-[#bb9457]" />
                 <h2 className="text-xl font-semibold tracking-tight">{entry.term}</h2>
@@ -95,17 +92,17 @@ export default function MnemonicPalace() {
                 <p>{entry.location}</p>
               </div>
               <p className="text-base mt-2">{entry.mnemonic}</p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         ))}
       </motion.div>
 
       <div className="mt-12 max-w-4xl mx-auto text-center">
         <h2 className="text-2xl font-semibold mb-4">🧭 Guided Tour</h2>
         <div className="flex items-center justify-center gap-4 mb-4">
-          <Button onClick={handlePrev} className="bg-[#bb9457] text-white">Previous</Button>
+          <button onClick={handlePrev} className="bg-[#bb9457] text-white px-4 py-2 rounded">Previous</button>
           <span className="text-lg font-semibold">{data[currentIndex]?.term}</span>
-          <Button onClick={handleNext} className="bg-[#bb9457] text-white">Next</Button>
+          <button onClick={handleNext} className="bg-[#bb9457] text-white px-4 py-2 rounded">Next</button>
         </div>
         {data[currentIndex] && (
           <motion.div
@@ -115,8 +112,8 @@ export default function MnemonicPalace() {
             transition={{ duration: 0.4 }}
             className="max-w-xl mx-auto"
           >
-            <Card className="border border-[#bb9457] bg-[#fffaf0] shadow-md">
-              <CardContent className="p-4 space-y-2">
+            <div className="border border-[#bb9457] bg-[#fffaf0] shadow-md p-4 rounded">
+              <div className="p-4 space-y-2">
                 <div className="flex items-center gap-2">
                   <Landmark className="h-5 w-5 text-[#bb9457]" />
                   <h2 className="text-xl font-semibold tracking-tight">{data[currentIndex].term}</h2>
@@ -126,8 +123,8 @@ export default function MnemonicPalace() {
                   <p>{data[currentIndex].location}</p>
                 </div>
                 <p className="text-base mt-2">{data[currentIndex].mnemonic}</p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </motion.div>
         )}
 
